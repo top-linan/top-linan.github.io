@@ -79,7 +79,8 @@ Applied big data and distributed computing for seismic data analysis and risk in
 - **LLM Apps**: RAG, LangChain, Prompt Engineering  
 - **Data**: Pandas, NumPy, SQL, Matplotlib, Seaborn, Plotly  
 - **Big Data / Infra**: Hadoop, Spark, Docker, Kubernetes, Redis
-- 
+
+---
 ## Additional
 ### BNBU Dream Weavers Club  
 *10/2022–Present*  
