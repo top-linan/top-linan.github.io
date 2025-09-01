@@ -6,17 +6,6 @@ author_profile: true
 ---
 
 **Hi, I'm Linan Wu.**  
-BSc (Hons) in Data Science @ BNBU (GPA 3.7/4.0), Minor in Economics (GPA 3.8/4.0).  
-Awards: Guangdong Provincial 3rd Prize — CUMCM 2024; BNBU Second-tier Scholarship (2022–23, 2023–24).
-
-
-# **Linan Wu**
-
-**Mobile:** +86 181 3805 5392  
-**Email:** linan_huilaioffer@163.com  
-
----
-
 ## **EDUCATION**
 **Beijing Normal – Hong Kong Baptist University (BNBU)**  
 **Bachelor of Science (Honors) in Data Science (GPA 3.7/4.0)**  
