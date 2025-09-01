@@ -28,7 +28,7 @@ author_profile: true
 ---
 
 ## **INTERNSHIP**
-**Guangzhou Yunke Information Technology Co., Ltd.**  
+### **Guangzhou Yunke Information Technology Co., Ltd.**  
 **Intern of Backend Development**  
 *06-08/2025*  
 
@@ -45,27 +45,27 @@ author_profile: true
 ---
 
 ## **PROJECTS**
-**Construction of Large Language Model Inference System**  
+### **Construction of Large Language Model Inference System**
 *02-06/2025*  
 - Built a **multi-model architecture** (Mistral-7B, Yi-34B, LLaMA 2) using **Zero-shot, Few-shot, and SFT fine-tuning**, optimized via **H2O LLM Studio** → **accuracy improved by 10%** in physics/biology  
 - Used **LoRA fine-tuning** and cached **past_key_values**, increasing **inference speed by 60%**  
 - Integrated **RAG + LangChain** with a **60M-paragraph Wikipedia corpus** and **FAISS vector retrieval**, using multi-round prompt templates  
 - Implemented **confidence integration** (TF-IDF re-ranking + embedding similarity) → **Top3 hit rate 93%**; **integrated model 15% more accurate** than single model  
 
-**Identification of Offensive Language in Chinese Social Media Environment**  
+### **Identification of Offensive Language in Chinese Social Media Environment**  
 *10-12/2024*  
 - Collected, cleaned, and annotated **Chinese social media data**; built datasets **COLD, ToxiCN, ToxiCloakCN**  
 - Built **LSTM, BERT, RoBERTa** models for offensive language detection  
 - Evaluated via **Accuracy, ROC-AUC, F1-score**; selected **RoBERTa** achieving **78.54% accuracy**  
 
-**Predictive Analysis of Diamond Prices**  
+### **Predictive Analysis of Diamond Prices**  
 *05-06/2024*  
 - Used **Python & R** to model **5000 transaction records** for **diamond price prediction**  
 - Conducted **data cleaning, feature engineering, Box-Cox transformation**  
 - Applied **stepwise regression + cross-validation** → **R² = 0.9853**, **RMSE = 0.1308**  
 - Model passed **residual independence, normality, and homoscedasticity tests**  
 
-**Processing and Analyzing of Earthquake Data (1900–2023)**  
+### **Processing and Analyzing of Earthquake Data (1900–2023)**  
 *03-05/2023*  
 - Used **Hadoop + Spark** for large-scale earthquake data processing  
 - Performed **data cleaning, reverse geocoding**, spatiotemporal analysis  
@@ -74,7 +74,7 @@ author_profile: true
 ---
 
 ## **ADDITIONAL**
-**BNBU Dream Weavers Club**  
+### **BNBU Dream Weavers Club**  
 *10/2022 – Now*  
 - Progressed from **ordinary member → Vice President**, leading **50+ members**  
 - Planned and organized **fundraising campaigns, guest speeches, volunteer programs**  
