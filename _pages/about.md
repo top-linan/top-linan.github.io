@@ -16,15 +16,7 @@ author_profile: true
 
 ---
 
-## COMPUTER TECHNIQUES
-- **Programming languages:** Python, R, C, Java  
-- **Deep learning frameworks:** PyTorch, TensorFlow, Hugging Face Transformers, JAX  
-- **Machine learning & NLP:** Transformer (GPT, BERT, RoBERTa, LLaMA), CNN, RNN, LSTM  
-- **LLM applications and methods:** LangChain, Prompt Engineering  
-- **Data processing & visualization:** Pandas, NumPy, SQL, Matplotlib, Seaborn, Plotly  
-- **Big Data and Distributed Computing:** Hadoop, Spark, Docker, Kubernetes  
 
----
 
 ## INTERNSHIP
 ### **Guangzhou Yunke Information Technology Co., Ltd.**  
@@ -72,6 +64,17 @@ author_profile: true
 - Adopted visualization tools such as Plotly and WordCloud to clearly display the spatial hotspots and key event characteristics of earthquake data, providing strong data support for subsequent risk prediction and disaster prevention and mitigation  
 
 ---
+
+## TECHNIQUES SKILLS
+- **Programming languages:** Python, R, C, Java  
+- **Deep learning frameworks:** PyTorch, TensorFlow, Hugging Face Transformers, JAX  
+- **Machine learning & NLP:** Transformer (GPT, BERT, RoBERTa, LLaMA), CNN, RNN, LSTM  
+- **LLM applications and methods:** LangChain, Prompt Engineering  
+- **Data processing & visualization:** Pandas, NumPy, SQL, Matplotlib, Seaborn, Plotly  
+- **Big Data and Distributed Computing:** Hadoop, Spark, Docker, Kubernetes  
+
+---
+
 
 ## ADDITIONAL
 ### **BNBU Dream Weavers Club**  
