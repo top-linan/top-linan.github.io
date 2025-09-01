@@ -9,12 +9,6 @@ author_profile: true
 BSc (Hons) in Data Science @ BNBU (GPA 3.7/4.0), Minor in Economics (GPA 3.8/4.0).  
 Awards: Guangdong Provincial 3rd Prize — CUMCM 2024; BNBU Second-tier Scholarship (2022–23, 2023–24).
 
-## Skills
-- **Languages**: Python, R, C, Java  
-- **DL/ML**: PyTorch, TensorFlow, JAX, Transformers (GPT/BERT/RoBERTa/LLaMA)  
-- **LLM Apps**: RAG, LangChain, Prompt Engineering  
-- **Data**: Pandas, NumPy, SQL, Matplotlib, Seaborn, Plotly  
-- **Big Data / Infra**: Hadoop, Spark, Docker, Kubernetes, Redis
 
 ## Internship
 
