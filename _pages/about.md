@@ -73,7 +73,7 @@ Applied big data and distributed computing for seismic data analysis and risk in
 - Analyzed spatiotemporal patterns and visualized results with **Plotly** and **WordCloud**.
 
 ---
-## Skills
+## Technical Skills
 - **Languages**: Python, R, C, Java  
 - **DL/ML**: PyTorch, TensorFlow, JAX, Transformers (GPT/BERT/RoBERTa/LLaMA)  
 - **LLM Apps**: RAG, LangChain, Prompt Engineering  
