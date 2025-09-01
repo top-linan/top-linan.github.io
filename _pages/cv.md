@@ -10,12 +10,11 @@ redirect_from:
 {% include base_path %}
 
 
-# Curriculum Vitae
 
 <!-- 下载按钮 -->
 <p>
   <a class="btn btn--primary" href="{{ '/files/cv.pdf' | relative_url }}" target="_blank" rel="noopener">
-    📄 打开 / 下载我的简历（PDF）
+    Download
   </a>
 </p>
 
