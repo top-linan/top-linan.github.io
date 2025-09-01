@@ -6,8 +6,11 @@ author_profile: true
 ---
 
 
-- **Languages**: Python, R, C, Java  
-- **DL/ML**: PyTorch, TensorFlow, JAX, Transformers (GPT/BERT/RoBERTa/LLaMA)  
-- **LLM Apps**: RAG, LangChain, Prompt Engineering  
-- **Data**: Pandas, NumPy, SQL, Matplotlib, Seaborn, Plotly  
-- **Big Data / Infra**: Hadoop, Spark, Docker, Kubernetes, Redis
+- **Programming languages:** Python, R, C, Java  
+- **Deep learning frameworks:** PyTorch, TensorFlow, Hugging Face Transformers, JAX  
+- **Machine learning & NLP:** Transformer (GPT, BERT, RoBERTa, LLaMA), CNN, RNN, LSTM  
+- **LLM applications and methods:** LangChain, Prompt Engineering  
+- **Data processing & visualization:** Pandas, NumPy, SQL, Matplotlib, Seaborn, Plotly  
+- **Big Data and Distributed Computing:** Hadoop, Spark, Docker, Kubernetes  
+
+
