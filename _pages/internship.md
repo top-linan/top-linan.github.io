@@ -1,5 +1,5 @@
 ---
-permalink: /
+permalink: /intership/
 title: "Intership"
 layout: single
 author_profile: true
