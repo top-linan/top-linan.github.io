@@ -1,12 +1,12 @@
 ---
-permalink: /intership/
+permalink: /internship/
 title: "Intership"
 layout: single
 author_profile: true
 ---
 
 
-## Internship
+
 
 - **Guangzhou Yunke Information Technology Co., Ltd.**  
   *Intern of Backend Development* (06–08/2025)
