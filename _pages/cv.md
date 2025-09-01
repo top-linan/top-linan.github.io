@@ -9,56 +9,30 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+# Curriculum Vitae
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+<!-- 下载按钮 -->
+<p>
+  <a class="btn btn--primary" href="{{ '/files/cv.pdf' | relative_url }}" target="_blank" rel="noopener">
+    📄 打开 / 下载我的简历（PDF）
+  </a>
+</p>
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+<!-- 内嵌 PDF 预览（浏览器支持时直接展示） -->
+<object
+  data="{{ '/files/cv.pdf' | relative_url }}"
+  type="application/pdf"
+  width="100%"
+  height="900px">
+  <embed
+    src="{{ '/files/cv.pdf' | relative_url }}"
+    type="application/pdf"
+    width="100%"
+    height="900px" />
+  <!-- 回退内容（不支持内嵌时显示下载链接） -->
+  <p>你的浏览器不支持直接预览 PDF。你可以
+    <a href="{{ '/files/cv.pdf' | relative_url }}" target="_blank" rel="noopener">点击这里下载</a>。
+  </p>
+</object>
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
