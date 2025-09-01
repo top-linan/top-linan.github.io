@@ -5,7 +5,6 @@ layout: single
 author_profile: true
 ---
 
-## Projects
 
 ### Construction of Large Language Model Inference System  
 *02–06/2025*  
