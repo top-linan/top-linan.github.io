@@ -6,6 +6,7 @@ author_profile: true
 ---
 
 <style>
+  /* 基础折叠样式 */
   .ap-accordion summary { cursor: pointer; font-weight: 600; list-style: none; padding: .35rem 0; }
   .ap-accordion summary::-webkit-details-marker { display: none; }
   .ap-accordion summary::before { content: "▶"; display: inline-block; margin-right: .5rem; transition: transform .15s ease; }
@@ -13,13 +14,34 @@ author_profile: true
 
   .ap-accordion details { margin-bottom: .9rem; }
   .ap-accordion .meta { opacity:.75; font-weight: 400; margin-left:.25rem; }
-  .ap-accordion .ap-teaser { display:block; margin-top:.15rem; font-weight:400; opacity:.9; line-height:1.35; font-size:.95rem;
-    overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; }
-  /* 取消展开内容的左缩进 */
+
+  /* 摘要（标题下的小介绍，收起时可见） */
+  .ap-accordion .ap-teaser {
+    display:block; margin-top:.15rem; font-weight:400; opacity:.9; line-height:1.35; font-size:.95rem;
+    overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;
+  }
+
+  /* 展开内容：取消左缩进 */
   .ap-accordion .content { margin: .6rem 0 1rem 0; }
-  .ap-accordion .content ul, .ap-accordion .content ol { margin: .35rem 0 .75rem 0; padding-left: 1rem; }
+  .ap-accordion .content ul, .ap-accordion .content ol {
+    margin: .35rem 0 .75rem 0; padding-left: 0; list-style-position: inside;
+  }
+
+  /* 顶部一键开合按钮 */
+  .ap-controls { display:flex; justify-content:flex-end; margin:.25rem 0 1rem; }
+  .ap-btn {
+    font-size:.9rem; padding:.35rem .7rem; border:1px solid rgba(0,0,0,.15);
+    border-radius:.6rem; background:transparent; cursor:pointer;
+  }
+  .ap-btn:focus-visible { outline:2px solid #444; outline-offset:2px; }
 </style>
 
+<!-- 一键开合按钮 -->
+<div class="ap-controls">
+  <button class="ap-btn" id="toggle-all" type="button" aria-pressed="false">Expand all</button>
+</div>
+
+<!-- 折叠列表 -->
 <div class="ap-accordion">
 
   <details>
@@ -110,3 +132,26 @@ author_profile: true
   </details>
 
 </div>
+
+<!-- 一键展开 / 收起 -->
+<script>
+(function () {
+  const btn = document.getElementById('toggle-all');
+  const items = document.querySelectorAll('.ap-accordion details');
+
+  function allOpen() { return Array.from(items).every(d => d.open); }
+  function updateBtn() {
+    const open = allOpen();
+    btn.textContent = open ? 'Collapse all' : 'Expand all';
+    btn.setAttribute('aria-pressed', open ? 'true' : 'false');
+  }
+  function setAll(open) {
+    items.forEach(d => open ? d.setAttribute('open', '') : d.removeAttribute('open'));
+    updateBtn();
+  }
+
+  btn.addEventListener('click', () => setAll(!allOpen()));
+  items.forEach(d => d.addEventListener('toggle', updateBtn));
+  updateBtn();
+})();
+</script>
