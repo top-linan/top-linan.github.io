@@ -27,7 +27,7 @@ author_profile: true
 
 ---
 
-## INTERNSHIP
+## INTERNSHIPS
 
 ### **SFMAP Technology (Shenzhen) Co., Ltd. (subsidiary to Shunfeng Holding Co., Ltd)**                 
 *Algorithm Engineer Intern*                                                   
