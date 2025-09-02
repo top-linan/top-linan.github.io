@@ -17,6 +17,15 @@ author_profile: true
 ---
 
 
+## TECHNIQUES SKILLS
+- **Programming languages:** Python, R, C, Java  
+- **Deep learning frameworks:** PyTorch, TensorFlow, Hugging Face Transformers, JAX  
+- **Machine learning & NLP:** Transformer (GPT, BERT, RoBERTa, LLaMA), CNN, RNN, LSTM  
+- **LLM applications and methods:** LangChain, Prompt Engineering  
+- **Data processing & visualization:** Pandas, NumPy, SQL, Matplotlib, Seaborn, Plotly  
+- **Big Data and Distributed Computing:** Hadoop, Spark, Docker, Kubernetes  
+
+---
 
 ## INTERNSHIP
 ### **Guangzhou Yunke Information Technology Co., Ltd.**  
@@ -65,15 +74,6 @@ author_profile: true
 
 ---
 
-## TECHNIQUES SKILLS
-- **Programming languages:** Python, R, C, Java  
-- **Deep learning frameworks:** PyTorch, TensorFlow, Hugging Face Transformers, JAX  
-- **Machine learning & NLP:** Transformer (GPT, BERT, RoBERTa, LLaMA), CNN, RNN, LSTM  
-- **LLM applications and methods:** LangChain, Prompt Engineering  
-- **Data processing & visualization:** Pandas, NumPy, SQL, Matplotlib, Seaborn, Plotly  
-- **Big Data and Distributed Computing:** Hadoop, Spark, Docker, Kubernetes  
-
----
 
 
 ## ADDITIONAL
