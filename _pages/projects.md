@@ -6,6 +6,7 @@ author_profile: true
 ---
 ### **Image Matching Challenge 2025 (Kaggle)**                                     
 *04-06/2025*
+
 Aimed to construct a complete system of image matching and 3D reconstruction inference that can predict camera’s extrinsic parameters and scene affiliation in different scenarios
 - Utilized FAISS cosine similarity retrieval, based on DINOv2 and CLIP global features, to generate candidate image pairs, ensuring coverage of matched pairs under cross-view and cross-illumination conditions
 - Employed ALIKED to extract local key points and descriptors, combined with LightGlue for efficient matching; implemented a fallback to LoFTR when matched points are insufficient, boosting recall by over 15% in scenes with weak textures or repetitive structures
@@ -15,6 +16,7 @@ Aimed to construct a complete system of image matching and 3D reconstruction inf
 
 ### **BYU - Locating Bacterial Flagellar Motors 2025 (Kaggle)**                          
 *04-06/2025*
+
 Aimed to precisely localize bacterial flagellar motors in three-dimensional electron tomographic images reconstructed from a series of two-dimensional projection images, which are characterized by significant noise and substantial variations
 - Constructed a two-stage inference pipeline: the first stage utilizes YOLOv8/YOLO11 combined with SAHI sliced inference and multi-resolution TTA to generate candidate points; the second stage employs rotation + zoomed cropping, Midpoint Reasoning (merging closely located detection points), and Bypass Logic (skipping the second stage for high-confidence detections) for refined screening and acceleration
 - Trained YOLOv8l/YOLO11l by integrating official and externally corrected datasets; additionally trained a localized model utilizing random cropping to enhance robustness in detecting small-scale regions
