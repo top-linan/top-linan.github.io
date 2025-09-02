@@ -1,6 +1,6 @@
 ---
 permalink: /internship/
-title: "Intership"
+title: "Interships"
 layout: single
 author_profile: true
 ---
