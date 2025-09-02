@@ -7,6 +7,7 @@ author_profile: true
 ### **SFMAP Technology (Shenzhen) Co., Ltd. (subsidiary to Shunfeng Holding Co., Ltd)**                 
 *Algorithm Engineer Intern*                                                   
  *07-08/2025*
+ 
 Participated in the development of a Flask-based platform for driver safety analytics, mainly modules such as automated anomaly detection, AI-driven insight generation, and Text-to-SQL, to achieve end-to-end intelligence in data analytics 
    - Designed and implemented five APIs (overview, analysis list, operational analysis, AI-driven insights, and automatic insights), achieved the interfacing of the data service layer and the unifying of JSON serialization, to support frontend consumption
    - Develop an automated insight engine: fulfilled the AnomalyInsight data structure, integrating Z-Score (threshold 3.0/2.5) + IQR detection methods and 4 business rules (safety score decreased by 10, accident rate month-over-month increased by 50%+, regional disparity decreased by 30%, and proportion of high-risk driver decreased by 20%); output the top 30 abnormal insights sorted by confidence level and deviation, achieving a coverage rate of 90%+, and identify high-risk drivers 1–2 weeks in advance
