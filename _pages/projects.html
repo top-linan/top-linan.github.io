@@ -13,27 +13,24 @@ author_profile: true
 
   .ap-accordion details { margin-bottom: .9rem; }
   .ap-accordion .meta { opacity:.75; font-weight: 400; margin-left:.25rem; }
-  .ap-accordion .ap-teaser {
-    display:block; margin-top:.15rem; font-weight:400; opacity:.88; line-height:1.35; font-size:.95rem;
-    overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; /* 两行省略 */
-  }
-  .ap-accordion .content { margin: .6rem 0 1rem 0; }        /* 去掉整体左缩进 */
-  .ap-accordion .content ul,
-  .ap-accordion .content ol { margin: .35rem 0 .75rem 0; padding-left: 1rem; }
+  .ap-accordion .ap-teaser { display:block; margin-top:.15rem; font-weight:400; opacity:.9; line-height:1.35; font-size:.95rem;
+    overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; }
+  /* 取消展开内容的左缩进 */
+  .ap-accordion .content { margin: .6rem 0 1rem 0; }
+  .ap-accordion .content ul, .ap-accordion .content ol { margin: .35rem 0 .75rem 0; padding-left: 1rem; }
 </style>
 
 <div class="ap-accordion">
 
   <details>
     <summary>
-      Image Matching Challenge 2025 (Kaggle) <span class="meta">· 04–06/2025</span>
+      Image Matching Challenge 2025 (Kaggle) <span class="meta">· 04-06/2025</span>
       <span class="ap-teaser">Aimed to construct a complete system of image matching and 3D reconstruction inference that can predict camera’s extrinsic parameters and scene affiliation in different scenarios</span>
     </summary>
     <div class="content">
       <ul>
         <li>Utilized FAISS cosine similarity retrieval, based on DINOv2 and CLIP global features, to generate candidate image pairs, ensuring coverage of matched pairs under cross-view and cross-illumination conditions</li>
-        <li>Employed ALIKED to extract local key points and descriptors, combined with LightGlue for efficient matching; implemented a fallback to LoFTR when matched points are insufficient, boosting recall by over 15% in scenes with weak textures or repetitive structures</li>
-        <li>Adopted PyCOLMAP for incremental mapping to estimate camera rotation matrices and translation vectors, while automatically performing scene clustering to ensure mapping purity and robustness</li>
+        <li>Employed ALIKED to extract local key points and descriptors, combined with LightGlue for efficient matching; implemented a fallback to LoFTR when matched points are insufficient, boosting recall by over 15% in scenes with weak textures or repetitive structures -Adopted PyCOLMAP for incremental mapping to estimate camera rotation matrices and translation vectors, while automatically performing scene clustering to ensure mapping purity and robustness</li>
         <li>Designed a mechanism for parameter tuning and caching (including SIM threshold, number of feature points, and fallback strategy) to significantly reduce inference time while maintaining accuracy; persist intermediate results in HDF5 supported resumable execution</li>
         <li>Implemented an automated submission module that writes the cluster, R, and t into a submission.csv file compliant with competition specifications; the coverage and localization accuracy on the local validation set remained stable and met the requirements for submission</li>
       </ul>
@@ -42,72 +39,72 @@ author_profile: true
 
   <details>
     <summary>
-      BYU - Locating Bacterial Flagellar Motors 2025 (Kaggle) <span class="meta">· 04–06/2025</span>
-      <span class="ap-teaser">Aimed to precisely localize bacterial flagellar motors in 3D electron tomographic images reconstructed from 2D projections with significant noise and large variations</span>
+      BYU - Locating Bacterial Flagellar Motors 2025 (Kaggle) <span class="meta">· 04-06/2025</span>
+      <span class="ap-teaser">Aimed to precisely localize bacterial flagellar motors in three-dimensional electron tomographic images reconstructed from a series of two-dimensional projection images, which are characterized by significant noise and substantial variations</span>
     </summary>
     <div class="content">
       <ul>
-        <li>Constructed a two-stage inference pipeline: YOLOv8/YOLO11 + SAHI + multi-resolution TTA for candidate points; then rotation + zoomed cropping, Midpoint Reasoning, and Bypass Logic for refinement and acceleration</li>
-        <li>Trained YOLOv8l/YOLO11l with official and externally corrected datasets; additionally trained a localized model using random cropping to improve robustness on small regions</li>
-        <li>Performed model ensembling and built multiple submission configs to explore SAHI on/off, different scaling (z1.5/z2/z3), and parallel pipelines</li>
+        <li>Constructed a two-stage inference pipeline: the first stage utilizes YOLOv8/YOLO11 combined with SAHI sliced inference and multi-resolution TTA to generate candidate points; the second stage employs rotation + zoomed cropping, Midpoint Reasoning (merging closely located detection points), and Bypass Logic (skipping the second stage for high-confidence detections) for refined screening and acceleration</li>
+        <li>Trained YOLOv8l/YOLO11l by integrating official and externally corrected datasets; additionally trained a localized model utilizing random cropping to enhance robustness in detecting small-scale regions</li>
+        <li>Performed model ensemble learning and constructed multiple submission configurations to explore various combinations of SAHI activation, different scaling factors (z1.5/z2/z3), and parallel pipelines, ensuring the model's generalization capability</li>
       </ul>
     </div>
   </details>
 
   <details>
     <summary>
-      Construction of Large Language Model Inference System <span class="meta">· 02–06/2025</span>
-      <span class="ap-teaser">Built a high-accuracy LLM inference system for complex natural science MCQs, with multi-model integration and RAG to boost accuracy and speed</span>
+      Construction of Large Language Model Inference System <span class="meta">· 02-06/2025</span>
+      <span class="ap-teaser">Aimed to build a high-accuracy large language model inference system to answer complex natural science multiple-choice questions generated by GPT-3.5</span>
     </summary>
     <div class="content">
       <ul>
-        <li>Multi-model architecture (Mistral-7B, Yi-34B, LLaMA 2); zero/few-shot + SFT with H2O LLM Studio → >10% accuracy gain in physics/biology</li>
-        <li>LoRA fine-tuning + cached past_key_values → 60% faster inference</li>
-        <li>RAG + LangChain with 60M-paragraph corpus and FAISS retrieval; multi-round prompt templates</li>
-        <li>Confidence integration with TF-IDF re-ranking and embedding similarity → Top-3 hit 93%; ensemble +15% vs single model</li>
+        <li>Built a multi-model architecture based on open-source models such as Mistral-7B, Yi-34B, and LLaMA 2, using Zero-shot, Few-shot, and SFT fine-tuning strategies, combined with H2O LLM Studio, to optimize the model, achieving an accuracy improvement of over 10% in specific fields such as physics/biology</li>
+        <li>Used LoRA fine-tuning and cached past_key_values, increasing inference speed by 60%</li>
+        <li>Dynamically enhanced context by integrating RAG and LangChain, building a corpus containing 60 million paragraphs based on multi-source Wikipedia data, developing a FAISS vector retrieval system, and entering pre-designed multi-round Prompt templates</li>
+        <li>Implemented confidence integration based on results of multiple models, combined with methods such as TF-IDF re-ranking and Embedding similarity, to increase the Top3 hit rate to 93%; and the integrated model was 15% more accurate than the single model</li>
       </ul>
     </div>
   </details>
 
   <details>
     <summary>
-      Identification of Offensive Language in Chinese Social Media Environment <span class="meta">· 10–12/2024</span>
-      <span class="ap-teaser">Built a deep-learning system to detect implicit and explicit offensive remarks in Chinese social media</span>
+      Identification of Offensive Language in Chinese Social Media Environment <span class="meta">· 10-12/2024</span>
+      <span class="ap-teaser">Aimed to build an automated language detection and recognition system, based on deep learning technology, to help platforms manage implicit and explicit offensive remarks in the Chinese social media environment</span>
     </summary>
     <div class="content">
       <ul>
-        <li>Collected/cleaned/annotated data; curated COLD, ToxiCN, ToxiCloakCN datasets</li>
-        <li>Trained LSTM, BERT, RoBERTa; selected RoBERTa with 78.54% accuracy for complex language</li>
-        <li>Evaluated via Accuracy, ROC-AUC, F1; iteratively optimized</li>
+        <li>Conducted the collection, cleaning, and annotation of Chinese social media data; built and optimized multiple dedicated datasets including COLD, ToxiCN, and ToxiCloakCN</li>
+        <li>Built and trained LSTM neural networks and pre-trained language models (BERT and RoBERTa) to achieve accurate identification and classification of aggressive language</li>
+        <li>Evaluated and optimized the model through performance evaluation indicators (Accuracy, ROC-AUC, F1-score); eventually decided on the RoBERTa model, which achieved an accuracy of 78.54% and performed outstandingly in complex language recognition</li>
       </ul>
     </div>
   </details>
 
   <details>
     <summary>
-      Predictive Analysis of Diamond Prices <span class="meta">· 05–06/2024</span>
-      <span class="ap-teaser">Built a high-precision regression model on 5k diamond transactions with strong validation metrics</span>
+      Predictive Analysis of Diamond Prices <span class="meta">· 05-06/2024</span>
+      <span class="ap-teaser">Used Python and R languages to model and analyze 5000 pieces of diamond transaction data, attempting to build a high-precision price prediction model.</span>
     </summary>
     <div class="content">
       <ul>
-        <li>Data cleaning, feature engineering, Box-Cox transformations</li>
-        <li>Exploratory visualization; identified multicollinearity; improved predictions</li>
-        <li>Stepwise regression + cross-validation → R² = 0.9853, CV RMSE = 0.1308</li>
-        <li>Residual independence, normality, homoscedasticity tests passed</li>
+        <li>Implemented data cleaning, feature engineering, and multivariate transformation (Box-Cox) to optimize model performance</li>
+        <li>Explored data features through data visualization tools, identified multicollinearity between variables, and improved model prediction accuracy</li>
+        <li>Adopted stepwise regression and cross-validation methods; the final model achieved an R² of 0.9853 and a cross-validation RMSE of 0.1308, showing superior and stable performance</li>
+        <li>The model successfully passed regression assumption tests such as residual independence, normal distribution, and homoscedasticity to ensure the robustness of predictions</li>
       </ul>
     </div>
   </details>
 
   <details>
     <summary>
-      Processing and Analyzing of Earthquake Data from 1900 to 2023 <span class="meta">· 03–05/2023</span>
-      <span class="ap-teaser">Processed global long-series earthquake data with Hadoop/Spark; analyzed spatiotemporal patterns and hotspots</span>
+      Processing and Analyzing of Earthquake Data from 1900 to 2023 <span class="meta">· 03-05/2023</span>
+      <span class="ap-teaser">Used big data and distributed computing technologies to carry out in-depth mining and analysis of global earthquake data from 1900 to 2023 to cast light on the spatiotemporal patterns of seismic activity and potential risk areas</span>
     </summary>
     <div class="content">
       <ul>
-        <li>Large-scale storage and parallel computing with Hadoop/Spark</li>
-        <li>Cleaning, time standardization, reverse geocoding for precise locations</li>
-        <li>Visualized hotspots and key events (Plotly, WordCloud) to support risk prediction</li>
+        <li>Utilized big data frameworks such as Hadoop and Spark for large-scale data storage and parallel computing, completing efficient processing and analysis of global long-time series earthquake data</li>
+        <li>Performed data cleaning and time format standardization, used reverse geocoding technology to obtain accurate geographical information, and conducted in-depth analysis of the spatiotemporal distribution characteristics of earthquakes</li>
+        <li>Adopted visualization tools such as Plotly and WordCloud to clearly display the spatial hotspots and key event characteristics of earthquake data, providing strong data support for subsequent risk prediction and disaster prevention and mitigation</li>
       </ul>
     </div>
   </details>
