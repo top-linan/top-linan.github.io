@@ -28,6 +28,19 @@ author_profile: true
 ---
 
 ## INTERNSHIP
+
+### **SFMAP Technology (Shenzhen) Co., Ltd. (subsidiary to Shunfeng Holding Co., Ltd)**                 
+*Algorithm Engineer Intern*                                                   
+ *07-08/2025*
+ 
+Participated in the development of a Flask-based platform for driver safety analytics, mainly modules such as automated anomaly detection, AI-driven insight generation, and Text-to-SQL, to achieve end-to-end intelligence in data analytics 
+   - Designed and implemented five APIs (overview, analysis list, operational analysis, AI-driven insights, and automatic insights), achieved the interfacing of the data service layer and the unifying of JSON serialization, to support frontend consumption
+   - Develop an automated insight engine: fulfilled the AnomalyInsight data structure, integrating Z-Score (threshold 3.0/2.5) + IQR detection methods and 4 business rules (safety score decreased by 10, accident rate month-over-month increased by 50%+, regional disparity decreased by 30%, and proportion of high-risk driver decreased by 20%); output the top 30 abnormal insights sorted by confidence level and deviation, achieving a coverage rate of 90%+, and identify high-risk drivers 1–2 weeks in advance
+   - Built a Text-to-SQL Self-Service Query Function: combined SentenceTransformer + Chroma Vector Retrieval with Qwen2.5-72B LLM to implement the conversion of natural language to SQL (limited to SELECT, first 20 rows), ensuring data security, and covering 95%+ common query scenarios
+   - Introduced accessing LLMs via a Bastion Host: integrated LLM services in an offline environment to automatically generate Chinese security reports and management summaries, supporting insight archiving and cross-month queries through a Flask interface to enhance managerial decision-making efficiency
+   - Optimized database performance: configured SQLAlchemy connection pool parameters (pool_pre_ping, pool_recycle=3600, pool_size=10), and, via combination with the logging module, monitored SQL execution and automated insight processes, significantly improving system stability and concurrency capability
+
+     
 ### **Guangzhou Yunke Information Technology Co., Ltd.**  
 *Intern of Backend Development*  
 *06-08/2025*  
