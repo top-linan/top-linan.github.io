@@ -58,6 +58,24 @@ Participated in the development of a Flask-based platform for driver safety anal
 ---
 
 ## PROJECTS
+### **Image Matching Challenge 2025 (Kaggle)**                                     
+*04-06/2025*
+
+Aimed to construct a complete system of image matching and 3D reconstruction inference that can predict camera’s extrinsic parameters and scene affiliation in different scenarios
+- Utilized FAISS cosine similarity retrieval, based on DINOv2 and CLIP global features, to generate candidate image pairs, ensuring coverage of matched pairs under cross-view and cross-illumination conditions
+- Employed ALIKED to extract local key points and descriptors, combined with LightGlue for efficient matching; implemented a fallback to LoFTR when matched points are insufficient, boosting recall by over 15% in scenes with weak textures or repetitive structures
+-Adopted PyCOLMAP for incremental mapping to estimate camera rotation matrices and translation vectors, while automatically performing scene clustering to ensure mapping purity and robustness
+- Designed a mechanism for parameter tuning and caching (including SIM threshold, number of feature points, and fallback strategy) to significantly reduce inference time while maintaining accuracy; persist intermediate results in HDF5 supported resumable execution
+- Implemented an automated submission module that writes the cluster, R, and t into a submission.csv file compliant with competition specifications; the coverage and localization accuracy on the local validation set remained stable and met the requirements for submission
+
+### **BYU - Locating Bacterial Flagellar Motors 2025 (Kaggle)**                          
+*04-06/2025*
+
+Aimed to precisely localize bacterial flagellar motors in three-dimensional electron tomographic images reconstructed from a series of two-dimensional projection images, which are characterized by significant noise and substantial variations
+- Constructed a two-stage inference pipeline: the first stage utilizes YOLOv8/YOLO11 combined with SAHI sliced inference and multi-resolution TTA to generate candidate points; the second stage employs rotation + zoomed cropping, Midpoint Reasoning (merging closely located detection points), and Bypass Logic (skipping the second stage for high-confidence detections) for refined screening and acceleration
+- Trained YOLOv8l/YOLO11l by integrating official and externally corrected datasets; additionally trained a localized model utilizing random cropping to enhance robustness in detecting small-scale regions
+- Performed model ensemble learning and constructed multiple submission configurations to explore various combinations of SAHI activation, different scaling factors (z1.5/z2/z3), and parallel pipelines, ensuring the model's generalization capability
+- 
 ### **Construction of Large Language Model Inference System**  
 *02-06/2025*  
 - Built a multi-model architecture based on open-source models such as Mistral-7B, Yi-34B, and LLaMA 2, using Zero-shot, Few-shot, and SFT fine-tuning strategies, combined with H2O LLM Studio, to optimize the model, achieving an accuracy improvement of over 10% in specific fields such as physics/biology  
