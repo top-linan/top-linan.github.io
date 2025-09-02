@@ -5,7 +5,6 @@ layout: single
 author_profile: true
 ---
 
-<!-- 轻量样式（可选） -->
 <style>
   .ap-accordion summary { cursor: pointer; font-weight: 600; list-style: none; padding: .35rem 0; }
   .ap-accordion summary::-webkit-details-marker { display: none; }
@@ -17,12 +16,6 @@ author_profile: true
 </style>
 
 <div class="ap-accordion">
-
-<!-- 先放一个极简测试块，确保环境支持 -->
-<details>
-  <summary>Test toggle <span class="meta">· 点击应可展开/收起</span></summary>
-  <div class="content" markdown="1">It works.</div>
-</details>
 
 <details>
   <summary>Image Matching Challenge 2025 (Kaggle) <span class="meta">· 04–06/2025</span></summary>
@@ -100,15 +93,3 @@ Aimed to build an automated language detection & recognition system, based on de
 </details>
 
 </div>
-
-<!-- 可选：只允许同时展开一个（手风琴效果） -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const items = document.querySelectorAll('.ap-accordion details');
-    items.forEach(d => {
-      d.addEventListener('toggle', () => {
-        if (d.open) items.forEach(o => { if (o !== d) o.removeAttribute('open'); });
-      });
-    });
-  });
-</script>
